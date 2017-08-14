@@ -1,0 +1,1 @@
+COPY grocery_items(name, price, section) from 'db/seed_data.csv' DELIMITER ',' CSV HEADER; 

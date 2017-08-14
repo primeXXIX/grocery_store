@@ -1,14 +1,14 @@
 CREATE TABLE "products" (
 "id"  SERIAL ,
-"name" VARCHAR(64) NOT NULL 'NULL' ,
-"section" VARCHAR(24) NOT NULL DEFAULT 'NULL' ,
+"name" VARCHAR(64) NOT NULL ,
+"section" VARCHAR(24) NOT NULL ,
 "price" DECIMAL NOT NULL ,
 PRIMARY KEY ("id")
 );
 
 CREATE TABLE "shoppers" (
 "id"  SERIAL ,
-"name" VARCHAR(120) NOT NULL DEFAULT 'NULL' ,
+"name" VARCHAR(120) NOT NULL,
 PRIMARY KEY ("id")
 );
 

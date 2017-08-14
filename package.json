@@ -11,7 +11,7 @@
     "db:drop": "dropdb grocery_store",
     "db:create": "createdb grocery_store",
     "db:schema": "psql grocery_store < db/schema.sql",
-    "db:seed": "psql grocery_store < db/seed_data.sql",
+    "db:seed": "psql grocery_store < db/load_data.sql ; psql grocery_store < db/seed_data.sql",
     "db:build": "npm run db:drop ; npm run db:create ; npm run db:schema ; npm run db:seed ;"
   },
   "keywords": [],
@@ -19,9 +19,12 @@
   "license": "ISC",
   "dependencies": {
     "pg": "^7.1.2",
-    "pg-promise": "^6.3.8"
+    "pg-promise": "6.3.8"
   },
   "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-preset-env": "1.6.0",
     "chai": "^4.1.1",
     "mocha": "^3.5.0"
   }
